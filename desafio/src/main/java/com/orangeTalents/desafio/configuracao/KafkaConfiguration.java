@@ -36,7 +36,7 @@ public class KafkaConfiguration {
 
         return properties;
     }
-    
+
     @Bean
     public ConsumerFactory<String, EventoDeTransacao> transactionConsumerFactory() {
         StringDeserializer stringDeserializer = new StringDeserializer();
@@ -44,7 +44,7 @@ public class KafkaConfiguration {
 
         return new DefaultKafkaConsumerFactory<>(consumerConfigurations(), stringDeserializer, jsonDeserializer);
     }
-    
+
     @Bean
     public ConcurrentKafkaListenerContainerFactory<String, EventoDeTransacao> kafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, EventoDeTransacao> factory = new ConcurrentKafkaListenerContainerFactory<>();
@@ -52,4 +52,5 @@ public class KafkaConfiguration {
 
         return factory;
     }
+
 }
