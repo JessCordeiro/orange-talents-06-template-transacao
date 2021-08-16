@@ -32,10 +32,10 @@ public class TransacaoController {
 		  
 	
 		  
-		/* List<TransacaoDto> transacaoDto = transacao.stream()
-			  .map(TransacaoDto::new)
+		/* List<Transacao> transacao = transacao.stream()
+			  .map(Transacao::new)
 				 .collect(Collectors.toList());*/
-		  return ResponseEntity.ok(transacao);
+		  return ResponseEntity.ok(transacao); 
 	 
 	  }
 }
